@@ -23,7 +23,7 @@ const Contact = () => {
         setLoading(true); // Show loader
 
         try {
-            const res = await axios.post("http://localhost:8080/api/v1/portfolio/sendEmail", {
+            const res = await axios.post("https://portfolio-website-backend-production-d5be.up.railway.app/api/v1/portfolio/sendEmail", {
                 name,
                 email,
                 msg,
