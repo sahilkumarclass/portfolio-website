@@ -1,7 +1,6 @@
 import React from "react";
 import "./Menus.css";
-import Zoom from "react-reveal/Zoom";
-import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion"; // Import framer-motion
 import { Link } from "react-scroll";
 import {
     FcAbout,
@@ -12,192 +11,118 @@ import {
     FcReadingEbook,
     FcVideoProjector,
 } from "react-icons/fc";
+
 const Menus = ({ toggle }) => {
     return (
         <>
             {toggle ? (
                 <>
-                    <Zoom>
-                        <div className="navbar-profile-pic">
-                            <img
-                                src="https://media.licdn.com/dms/image/v2/D4D03AQFeVG6MgbqLPg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683881162161?e=1731542400&v=beta&t=MysUMUoy-JnP8vGD8wo8N0LNs50ULc3ThCQY73d5lHk"
-                                alt="profile pic"
-                            />
-                        </div>
-                    </Zoom>
-                    <Fade left>
-                        <div className="nav-items">
-                            <div className="nav-item">
-                                <div className="nav-link">
-                                    <Link
-                                        to="home"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-100}
-                                        duration={100}
-                                    >
-                                        <FcHome />
-                                        Home
-                                    </Link>
-                                </div>
-                                <div className="nav-link">
-                                    <Link
-                                        to="about"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-100}
-                                        duration={100}
-                                    >
-                                        <FcAbout />
-                                        About
-                                    </Link>
-                                </div>
-                                <div className="nav-link">
-                                    <Link
-                                        to="education"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-100}
-                                        duration={100}
-                                    >
-                                        <FcReadingEbook />
-                                        Education
-                                    </Link>
-                                </div>
+                    {/* Replace Zoom with framer-motion */}
+                    <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="navbar-profile-pic"
+                    >
+                        <img
+                            src="https://media.licdn.com/dms/image/v2/D4D03AQFeVG6MgbqLPg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683881162161?e=1731542400&v=beta&t=MysUMUoy-JnP8vGD8wo8N0LNs50ULc3ThCQY73d5lHk"
+                            alt="profile pic"
+                        />
+                    </motion.div>
 
-                                <div className="nav-link">
-                                    <Link
-                                        to="techstack"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-100}
-                                        duration={100}
-                                    >
-                                        <FcBiotech />
-                                        Tech Stack
-                                    </Link>
-                                </div>
+                    {/* Replace Fade with framer-motion */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -100 }} // Mimics the Fade with a slide from left
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="nav-items"
+                    >
+                        <div className="nav-item">
+                            <div className="nav-link">
+                                <Link to="home" spy={true} smooth={true} offset={-100} duration={100}>
+                                    <FcHome />
+                                    Home
+                                </Link>
+                            </div>
+                            <div className="nav-link">
+                                <Link to="about" spy={true} smooth={true} offset={-100} duration={100}>
+                                    <FcAbout />
+                                    About
+                                </Link>
+                            </div>
+                            <div className="nav-link">
+                                <Link to="education" spy={true} smooth={true} offset={-100} duration={100}>
+                                    <FcReadingEbook />
+                                    Education
+                                </Link>
+                            </div>
 
-                                <div className="nav-link">
-                                    <Link
-                                        to="projects"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-100}
-                                        duration={100}
-                                    >
-                                        <FcVideoProjector />
-                                        Projects
-                                    </Link>
-                                </div>
-                                <div className="nav-link">
-                                    <Link
-                                        to="work"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-100}
-                                        duration={100}
-                                    >
-                                        <FcPortraitMode />
-                                        Work Experince
-                                    </Link>
-                                </div>
-                                <div className="nav-link">
-                                    <Link
-                                        to="contact"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-100}
-                                        duration={100}
-                                    >
-                                        <FcBusinessContact />
-                                        Contact
-                                    </Link>
-                                </div>
+                            <div className="nav-link">
+                                <Link to="techstack" spy={true} smooth={true} offset={-100} duration={100}>
+                                    <FcBiotech />
+                                    Tech Stack
+                                </Link>
+                            </div>
+
+                            <div className="nav-link">
+                                <Link to="projects" spy={true} smooth={true} offset={-100} duration={100}>
+                                    <FcVideoProjector />
+                                    Projects
+                                </Link>
+                            </div>
+                            <div className="nav-link">
+                                <Link to="work" spy={true} smooth={true} offset={-100} duration={100}>
+                                    <FcPortraitMode />
+                                    Work Experience
+                                </Link>
+                            </div>
+                            <div className="nav-link">
+                                <Link to="contact" spy={true} smooth={true} offset={-100} duration={100}>
+                                    <FcBusinessContact />
+                                    Contact
+                                </Link>
                             </div>
                         </div>
-                    </Fade>
+                    </motion.div>
                 </>
             ) : (
                 <>
                     <div className="nav-items">
                         <div className="nav-item">
                             <div className="nav-link">
-                                <Link
-                                    to="home"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-100}
-                                    duration={100}
-                                >
+                                <Link to="home" spy={true} smooth={true} offset={-100} duration={100}>
                                     <FcHome />
                                 </Link>
                             </div>
                             <div className="nav-link">
-                                <Link
-                                    to="about"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-100}
-                                    duration={100}
-                                >
+                                <Link to="about" spy={true} smooth={true} offset={-100} duration={100}>
                                     <FcAbout />
                                 </Link>
                             </div>
                             <div className="nav-link">
-                                <Link
-                                    to="education"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-100}
-                                    duration={100}
-                                >
+                                <Link to="education" spy={true} smooth={true} offset={-100} duration={100}>
                                     <FcReadingEbook />
                                 </Link>
                             </div>
 
                             <div className="nav-link">
-                                <Link
-                                    to="techstack"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-100}
-                                    duration={100}
-                                >
+                                <Link to="techstack" spy={true} smooth={true} offset={-100} duration={100}>
                                     <FcBiotech />
                                 </Link>
                             </div>
 
                             <div className="nav-link">
-                                <Link
-                                    to="projects"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-100}
-                                    duration={100}
-                                >
+                                <Link to="projects" spy={true} smooth={true} offset={-100} duration={100}>
                                     <FcVideoProjector />
                                 </Link>
                             </div>
                             <div className="nav-link">
-                                <Link
-                                    to="work"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-100}
-                                    duration={100}
-                                >
+                                <Link to="work" spy={true} smooth={true} offset={-100} duration={100}>
                                     <FcPortraitMode />
                                 </Link>
                             </div>
                             <div className="nav-link">
-                                <Link
-                                    to="contact"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-100}
-                                    duration={100}
-                                >
+                                <Link to="contact" spy={true} smooth={true} offset={-100} duration={100}>
                                     <FcBusinessContact />
                                 </Link>
                             </div>

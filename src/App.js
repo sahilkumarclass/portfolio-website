@@ -8,7 +8,7 @@ import Techstack from "./page/Techstack/Techstack";
 import ScrollToTop from "react-scroll-to-top";
 import Layout from "./components/Layout/Layout";
 import { useTheme } from "./Context/ThemeContext";
-import Tada from "react-reveal/Tada";
+import { motion } from "framer-motion"; // Import framer-motion
 import './SpinnerLoader.css';
 
 const App = () => {
@@ -42,9 +42,14 @@ const App = () => {
             <Contact />
           </div>
           <div className="footer pb-3 ms-3">
-            <Tada>
+            {/* Replace Tada with framer-motion for the footer */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }} // Animation duration
+            >
               <h4 className="text-center">All Right Reserved 😍 SAHIL KUMAR &copy; 2024</h4>
-            </Tada>
+            </motion.div>
           </div>
           <ScrollToTop
             smooth
