@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from "../../Context/ThemeContext";
 import Typewriter from 'typewriter-effect';
-import Resume from '/Users/sahilkiumar/Desktop/Portfolio/client/src/assets/docs/Resume.pdf';
+import Resume from '../../assets/docs/Resume.pdf';
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import "./Home.css";
 import { motion } from "framer-motion"; // Import framer-motion
