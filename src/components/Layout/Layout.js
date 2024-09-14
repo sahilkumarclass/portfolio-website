@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Home from '../../page/Home/Home';
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from 'react-icons/ai';
-import "/Users/sahilkiumar/Desktop/Portfolio/client/src/components/Layout/Layout.css"
+import "./Layout.css"
 import Menus from '../Menus/Menus';
 const Layout = () => {
     const [toggle, setToggle] = useState(true);
