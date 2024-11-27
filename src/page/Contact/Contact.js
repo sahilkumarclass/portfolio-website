@@ -24,7 +24,7 @@ const Contact = () => {
         setLoading(true);
 
         try {
-            const res = await axios.post("portfolio-website-backend-production-0f84.up.railway.app", {
+            const res = await axios.post("https://portfolio-website-backend-production-0f84.up.railway.app/api/v1/portfolio/sendEmail", {
                 name,
                 email,
                 msg,

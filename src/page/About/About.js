@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import { motion } from "framer-motion"; // Import framer-motion
+import profilePhoto from "../../assets/images/profilePhoto.jpg";
 
 const About = () => {
     return (
@@ -29,7 +30,7 @@ const About = () => {
                     </div>
                     <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-image">
                         <img
-                            src="https://media.licdn.com/dms/image/v2/D4D03AQFeVG6MgbqLPg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683881162161?e=1731542400&v=beta&t=MysUMUoy-JnP8vGD8wo8N0LNs50ULc3ThCQY73d5lHk"
+                            src={profilePhoto}
                             alt="profile pic"
                         />
                     </div>

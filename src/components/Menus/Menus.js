@@ -2,6 +2,7 @@ import React from "react";
 import "./Menus.css";
 import { motion } from "framer-motion"; // Import framer-motion
 import { Link } from "react-scroll";
+import profilePhoto from "../../assets/images/profilePhoto.jpg";
 import {
     FcAbout,
     FcBiotech,
@@ -24,10 +25,7 @@ const Menus = ({ toggle }) => {
                         transition={{ duration: 0.5 }}
                         className="navbar-profile-pic"
                     >
-                        <img
-                            src="https://media.licdn.com/dms/image/v2/D4D03AQFeVG6MgbqLPg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683881162161?e=1731542400&v=beta&t=MysUMUoy-JnP8vGD8wo8N0LNs50ULc3ThCQY73d5lHk"
-                            alt="profile pic"
-                        />
+                        <img src={profilePhoto} alt="profile pic" />
                     </motion.div>
 
                     {/* Replace Fade with framer-motion */}
