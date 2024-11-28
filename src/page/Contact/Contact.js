@@ -24,11 +24,13 @@ const Contact = () => {
         setLoading(true);
 
         try {
-            const res = await axios.post("https://portfolio-website-backend-production-0f84.up.railway.app/api/v1/portfolio/sendEmail", {
-                name,
-                email,
-                msg,
-            });
+            // First attempt to send the message to the first API endpoint
+            const res = await axios.post(
+                "https://portfolio-website-backend-production-0f84.up.railway.app/api/v1/portfolio/sendEmail" ||
+                "https://portfolio-website-backend-1-2rbd.onrender.com/api/v1/portfolio/sendEmail",
+                { name, email, msg }
+            );
+
             if (res.data.success) {
                 toast.success(res.data.message);
                 setName("");
