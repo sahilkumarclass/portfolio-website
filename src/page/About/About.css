@@ -9,7 +9,7 @@
 .about-image img {
     border-radius: 10px;
     width: 100%;
-    height: 400px;
+    height: auto;
     /* You can add more styling as needed */
 }
 
