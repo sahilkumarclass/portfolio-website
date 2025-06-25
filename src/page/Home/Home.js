@@ -2,7 +2,7 @@ import React from 'react';
 import { useTheme } from "../../Context/ThemeContext";
 import Typewriter from 'typewriter-effect';
 import Resume from '../../assets/docs/Resume.pdf';
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { SunIcon, MoonIcon } from "../../components/ThemeIcons";
 import "./Home.css";
 import { motion } from "framer-motion"; // Import framer-motion
 
@@ -19,9 +19,9 @@ const Home = () => {
             <div className="container-fluid home-container" id="home">
                 <div className="theme-btn" onClick={handleTheme}>
                     {theme === "light" ? (
-                        <BsFillMoonStarsFill size={30} />
+                        <MoonIcon size={40} color="white" />
                     ) : (
-                        <BsFillSunFill size={30} />
+                        <SunIcon size={40} color="white" />
                     )}
                 </div>
 

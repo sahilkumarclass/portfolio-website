@@ -2,6 +2,7 @@ import React from 'react';
 import './Techstack.css';
 import { motion } from 'framer-motion';
 import { TechstackList } from '../../utils/TechstackList';
+// import SKLogo from '../../components/Menus/SKLogo';
 
 const Techstack = () => {
     return (

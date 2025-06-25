@@ -1,11 +1,16 @@
-.navbar-profile-pic img {
-    border-radius: 90px;
-    height: 150px;
-    width: 150px;
+.navbar-profile-pic {
     display: flex;
-    vertical-align: middle;
-    margin: 0 auto;
-    /* margin-top: 20px; */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.navbar-profile-pic img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .nav-item {

@@ -6,11 +6,18 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .about-image img {
     border-radius: 10px;
-    width: 100%;
-    height: auto;
-    /* You can add more styling as needed */
+    width: 320px;
+    height: 360px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .about-conen {

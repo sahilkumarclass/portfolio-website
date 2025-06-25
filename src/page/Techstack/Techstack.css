@@ -29,11 +29,21 @@
         rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     background-color: #138781;
     color: white;
-
     transition: 1s;
 }
 
+.techstack-title-with-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
 
+.sklogo-title {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
 
 /* =============================== */
 @media (max-width: 600px) {
