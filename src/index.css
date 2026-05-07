@@ -1,23 +1,95 @@
-/* CSS RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-base: 0 0% 4%;
+    --bg-elevated: 240 5% 7%;
+    --bg-subtle: 240 4% 10%;
+    --border: 240 5% 13%;
+    --border-strong: 240 5% 17%;
+    --fg: 0 0% 93%;
+    --fg-muted: 240 5% 65%;
+    --fg-subtle: 240 4% 46%;
+    --accent: 165 100% 43%;
+    --accent-hover: 165 100% 36%;
+    --accent-soft: 165 100% 43%;
+    --danger: 0 91% 71%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-base font-sans text-fg antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.25);
+    color: hsl(var(--fg));
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--bg-base));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border-strong));
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--fg-subtle));
+  }
+
+  /* Focus ring */
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 }
 
-/* DARK MODE */
+@layer components {
+  .dot-grid {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      hsl(var(--border-strong)) 1px,
+      transparent 0
+    );
+    background-size: 24px 24px;
+  }
 
-#dark {
-  background-color: #5f264a;
-  color: #f4eee0;
-}
+  .text-gradient-accent {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--fg)) 0%,
+      hsl(var(--accent)) 50%,
+      hsl(var(--fg)) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 
-/* ======================= */
-@media (max-width: 600px) {
-  .footer {
-    margin: 0;
-    padding: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  .ring-accent {
+    box-shadow: 0 0 0 1px hsl(var(--accent) / 0.4),
+      0 0 24px -4px hsl(var(--accent) / 0.35);
   }
 }
