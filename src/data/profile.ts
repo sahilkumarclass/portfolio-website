@@ -14,12 +14,14 @@ export const profile = {
     "I care about clean code, readable architecture, and the small details that make products feel solid: typed contracts, sensible error states, accessible markup. Currently finishing my B.Tech at Lovely Professional University and looking for SDE roles in 2026.",
   ],
   email: "sahilkumar.professional@gmail.com",
+  phone: "+91-7488187309",
   resumeUrl: resumePdf,
   photoUrl: profilePhoto,
   socials: {
     github: "https://github.com/sahilkumarclass",
     linkedin: "https://www.linkedin.com/in/sahil-kumar-16617224a/",
     leetcode: "https://leetcode.com/u/sahilkumarclass10/",
+    website: "http://sahil-kumar.dev/",
   },
   githubUser: "sahilkumarclass",
 } as const;

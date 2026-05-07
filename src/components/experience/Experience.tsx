@@ -1,4 +1,4 @@
-import { Briefcase } from "lucide-react";
+import { Briefcase, ExternalLink, MapPin } from "lucide-react";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -44,10 +44,33 @@ export function Experience() {
                 <div>
                   <h3 className="text-lg font-semibold text-fg">{item.role}</h3>
                   <p className="font-mono text-sm text-accent">{item.org}</p>
+                  {item.location && (
+                    <p className="mt-1 flex items-center gap-1.5 font-mono text-xs text-fg-subtle">
+                      <MapPin className="h-3 w-3" />
+                      {item.location}
+                    </p>
+                  )}
                 </div>
                 <p className="font-mono text-xs text-fg-subtle">{item.period}</p>
               </div>
               <p className="mt-3 text-sm text-fg-muted">{item.description}</p>
+              {item.links && item.links.length > 0 && (
+                <ul className="mt-3 flex flex-wrap gap-3 font-mono text-xs">
+                  {item.links.map((l) => (
+                    <li key={l.url}>
+                      <a
+                        href={l.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-accent hover:underline"
+                      >
+                        <ExternalLink className="h-3 w-3" />
+                        {l.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
               {item.tech && item.tech.length > 0 && (
                 <ul className="mt-3 flex flex-wrap gap-2">
                   {item.tech.map((t) => (

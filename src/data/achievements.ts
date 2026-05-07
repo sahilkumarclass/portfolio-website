@@ -8,6 +8,13 @@ export type Achievement = {
 
 export const achievements: Achievement[] = [
   {
+    id: "sih-2024",
+    title: "Smart India Hackathon (SIH) 2024 — Participant",
+    description:
+      "Built a web-based solution for real-time traffic data visualisation as part of a 6-member team — integrated public APIs with a PostgreSQL-backed service.",
+    category: "Hackathon",
+  },
+  {
     id: "leetcode",
     title: "Active on LeetCode",
     description:

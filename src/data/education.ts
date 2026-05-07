@@ -10,18 +10,19 @@ export type EducationItem = {
 export const education: EducationItem[] = [
   {
     id: "btech",
-    degree: "B.Tech, Computer Science & Engineering",
+    degree: "B.Tech, Computer Science & Engineering — CGPA: 7.4",
     institution: "Lovely Professional University",
-    period: "2022 — 2026",
-    location: "Punjab, India",
-    details: "Coursework in DSA, OS, DBMS, Networks, and Software Engineering.",
+    period: "Jul 2022 — Jul 2026",
+    location: "Phagwara, Punjab",
+    details:
+      "Coursework in DSA, Operating Systems, DBMS, Computer Networks, Software Engineering, OOP, and Web Technologies.",
   },
   {
     id: "senior-secondary",
-    degree: "Senior Secondary (XII)",
-    institution: "DAV Public School, Gaya",
-    period: "2020 — 2022",
-    location: "Bihar, India",
-    details: "Science stream — Mathematics, Physics, Chemistry.",
+    degree: "Higher Secondary — Science Stream (PCM)",
+    institution: "D.A.V Public School",
+    period: "Jun 2021 — May 2022",
+    location: "Gaya, Bihar",
+    details: "Mathematics, Physics, Chemistry.",
   },
 ];
